@@ -32,8 +32,6 @@ a{
 
 
 
-
-
 /* HEADER------------------------------ */
 
 .header{
@@ -77,6 +75,10 @@ a{
 }
 
 
+
+
+
+
 /* HERO---------------------------------- */
 
 .hero{
@@ -95,6 +97,7 @@ a{
     position: absolute;
     right: 0;
     bottom: 0;
+    z-index: 1;
 
     height: 95%;
     width: auto;
@@ -102,9 +105,151 @@ a{
 
 .hero .hero__title{
     color: #39FE39;
-    font-size: 200px;
-    padding: 164px 200px;
+    font-size: 300px;
+    font-style: italic;
+    padding: 150px 280px;
+
+    position: relative;
+    z-index: 2;
 }
 
 
 
+
+
+
+/* NEW PERSPECTIV */
+
+.new-perspective{
+    position: relative;
+    z-index: 1;
+    outline: 1px solid red
+}
+
+/* декор - квадраты на фоне */
+
+.new-perspective__square{
+    position: absolute;
+    display: block;
+    z-index: 2;
+
+    width: 70px;
+    height: 70px;
+    background-color: #39FE39;
+    opacity: 0.2;
+}
+
+.new-perspective__square--1{
+    width: 440px;
+    height: 95px;
+
+    top: 250px;
+    left:0;
+}
+
+.new-perspective__square--2{
+    width: 112px;
+    height: 109px;
+
+    top: 538px;
+    left: 688px;
+}
+
+.new-perspective__square--3{
+    width: 67px;
+    height: 65px;
+
+    top: 707px;
+    left: 922px;
+}
+
+.new-perspective__square--4{
+    width: 112px;
+    height: 109px;
+
+     top: 785px;
+    left: 700px;
+}
+
+.new-perspective__square--5{
+    width: 53px;
+    height: 50px;
+
+     top: 856px;
+    left: 560px;
+}
+
+
+.new-perspective__container{
+    display: flex;
+    flex-direction: column;
+    gap: 300px;
+
+    padding: 300px 0;
+}
+
+.new-perspective__item{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   align-items: center;
+   
+   
+}
+
+/* убираем отступ справа последней картинке */
+
+.new-perspective__item:last-child .new-perspective__img{
+    justify-self: end;
+}
+
+.new-perspective__content{
+    text-align: center;
+    line-height: 2;
+    color: #5B5B5B;
+    
+}
+
+.new-perspective__content h2{
+    font-weight: 400;
+}
+
+/* аннимация -- картинка и текст выдвигаются
+первая секция */
+.new-perspective__item:first-child .new-perspective__img{
+    opacity: 0;
+    transform: translateX(500px);
+    transition: 2s ease;
+}
+
+.new-perspective__item:first-child .new-perspective__content{
+    opacity: 0;
+    transform: translateX(-500px);
+    transition: 2s ease;
+}
+
+.new-perspective__item.is-visible .new-perspective__img,
+.new-perspective__item.is-visible .new-perspective__content{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* аннимация -- картинка и текст выдвигаются
+вторая секция */
+
+.new-perspective__item:last-child .new-perspective__img{
+    opacity: 0;
+    transform: translateX(-500px);
+    transition: 2s ease;
+}
+
+.new-perspective__item:last-child .new-perspective__content{
+    opacity: 0;
+    transform: translateX(500px);
+    transition: 2s ease;
+}
+
+.new-perspective__item.is-visible .new-perspective__img,
+.new-perspective__item.is-visible .new-perspective__content{
+    opacity: 1;
+    transform: translateX(0);
+}
