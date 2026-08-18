@@ -122,13 +122,14 @@ a{
 
 .new-perspective{
     position: relative;
+    overflow: hidden;
     z-index: 1;
-    outline: 1px solid red
+    
 }
 
 /* декор - квадраты на фоне */
 
-.new-perspective__square{
+.square{
     position: absolute;
     display: block;
     z-index: 2;
@@ -136,10 +137,10 @@ a{
     width: 70px;
     height: 70px;
     background-color: #39FE39;
-    opacity: 0.2;
+    opacity: 0.12;
 }
 
-.new-perspective__square--1{
+.square--1{
     width: 440px;
     height: 95px;
 
@@ -147,7 +148,7 @@ a{
     left:0;
 }
 
-.new-perspective__square--2{
+.square--2{
     width: 112px;
     height: 109px;
 
@@ -155,7 +156,7 @@ a{
     left: 688px;
 }
 
-.new-perspective__square--3{
+.square--3{
     width: 67px;
     height: 65px;
 
@@ -163,21 +164,111 @@ a{
     left: 922px;
 }
 
-.new-perspective__square--4{
+.square--4{
     width: 112px;
     height: 109px;
 
-     top: 785px;
-    left: 700px;
+    top: 805px;
+    left: 719px;
 }
 
-.new-perspective__square--5{
+.square--5{
     width: 53px;
     height: 50px;
 
-     top: 856px;
+    top: 856px;
     left: 560px;
 }
+
+.square--6{
+    width: 52px;
+    height: 55px;
+
+    top: 993px;
+    left: 718px;
+}
+
+.square--7{
+    width: 52px;
+    height: 55px;
+
+    top: 1322px;
+    left: 500px;
+}
+
+.square--8{
+    width: 104px;
+    height: 87px;
+
+    top: 1222px;
+    left: 800px;
+}
+
+.square--9{
+    width: 83px;
+    height: 79px;
+
+    top: 1422px;
+    left: 617px;
+}
+
+.square--10{
+    width: 40px;
+    height: 40px;
+
+    top: 1531px;
+   right: 800px;
+}
+
+.square--11{
+    width: 163px;
+    height: 129px;
+
+    bottom: 500px;
+    right: 0;
+}
+
+.square--12{
+    width: 182px;
+    height: 415px;
+
+    bottom: 0;
+    right: 0;
+}
+
+.square--13{
+    width: 160px;
+    height: 139px;
+
+    bottom: 0;
+    right: 210px;
+}
+
+.square--14{
+    width: 652px;
+    height: 139px;
+
+    bottom: 0;
+    right: 400px;
+}
+
+.square--15{
+    width: 75px;
+    height: 86px;
+
+    bottom: 0;
+    left: 532px;
+}
+
+.square--16{
+    width: 75px;
+    height: 80px;
+
+    bottom: 163px;
+    right: 641px;
+}
+
+
 
 
 .new-perspective__container{
@@ -253,3 +344,178 @@ a{
     opacity: 1;
     transform: translateX(0);
 }
+
+
+
+
+
+
+/* statement */
+
+.statement{
+    background-color: #4C4C4C;
+    padding: 150px 0;
+
+    position: relative;
+    z-index: 1;
+}
+
+.statement__decor-square .square{
+    opacity: 0.06;
+}
+
+.statement__decor-square .square--1{
+    width: 50px;
+    height: 60px;
+
+    left: 38px;
+    top: 217px;
+}
+
+.statement__decor-square .square--12{
+    height: 24px;
+    width: 27px;
+    left: 977px;
+    bottom: 93px;
+}
+
+.statement__decor-square .square--13{
+    height: 60px;
+    width: 50px;
+    left: 882px;
+    bottom: 42px;
+}
+
+.statement__decor-square .square--14{
+    height: 86px;
+
+    left: 200px;
+}
+
+.statement__decor-square .square--15{
+    width: 151px;
+
+    left: 0;
+}
+
+.statement__decor-square .square--17{
+    width: 102px;
+    height: 90px;
+
+    top: 0;
+    right: 131px;
+}
+
+.statement__decor-square .square--18{
+    width: 137px;
+    height: 60px;
+
+    top: 0;
+    right: 266px;
+}
+
+.statement__decor-square .square--19{
+    width: 655px;
+    height: 90px;
+
+    top: 0;
+    right: 440px;
+}
+
+.statement__decor-square .square--20{
+    width: 55px;
+    height: 90px;
+
+    top: 0;
+    left: 500px;
+}
+
+.statement__decor-square .square--21{
+    width: 20px;
+    height: 20px;
+
+    top: 200px;
+    left: 106px;
+}
+
+
+
+
+
+
+.statement__decor-line{
+    display: block;
+    width: 55%;
+    height: 7px;
+    background-color: #39FE39;
+    
+    
+}
+
+.statement__container{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 100px;
+    gap: 20px;
+}
+
+.statement__text{
+    grid-column: 1 / -1;
+    grid-row: 1 / 3;
+
+    font-size: 48px;
+    color: #39FE39;
+
+}
+
+.statement__text p{
+    padding: 80px 120px;
+    font-size: 72px;
+    color: #39FE39;
+}
+
+
+.statement__img{
+    width: 100%;
+    /* чтобы фото заполняла все пространство по высоте
+    и object-fit:cover чтобы картинка оставалась пропорциональной */
+    height: 100%;
+    object-fit: cover;
+}
+
+.statement__img--1{
+    grid-column: 1 / 5;
+    grid-row: 4 / 19;
+    border: 5px solid #39FE39;
+}
+
+.statement__img--2{
+    grid-column: 4 / 8;
+    grid-row: 3 / 13;
+    border: 5px solid white;
+}
+
+.statement__img--3{
+    grid-column: 3 / 8;
+    grid-row: 13 / 20;
+    width: 95%;
+   
+    border: 5px solid white;
+}
+
+.statement__title{
+    grid-column: 1 / -1;
+    grid-row: 21 / 25;
+    justify-items: end;
+
+    font-size: 150px;
+    font-style: italic;
+    color: #39FE39;
+
+    
+}
+
+.statement__title h2{
+    padding-right: 20%;
+}
+
