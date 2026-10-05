@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
     <title>fashion platform</title>
 </head>
 
@@ -16,6 +17,13 @@
                 <span class="header__logo-rotate">FASHION</span>
                 <span class="header__logo-main">FASHION</span>
             </div>
+
+            <div class="header__burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <nav class="header__nav">
                 <a href="">New Perspective</a>
                 <a href="">Stories</a>
@@ -272,25 +280,7 @@
         <p class="footer__copyright">© 2026 RAW - Creative Fashion Platform</p>
         <span class="decor-line footer__decor-line"></span>
     </footer>
-
-
-    <script>
-        const items = document.querySelectorAll('.new-perspective__item');
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                }
-            });
-        }, {
-            threshold: 0.15
-        });
-
-        items.forEach((item) => {
-            observer.observe(item);
-        });
-    </script>
+      
 </body>
 
 </html>
